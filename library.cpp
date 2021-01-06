@@ -1,16 +1,23 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Library
 {
-    public:
-    string bookName;
-    string authorNAme;
-    string  company;// the company which published the book
-    string publication;
-    string isbnNumber;
-    string totalCopy;//total copy in library
+    private:
+        string bookName,authorNAme,company,publication,isbnNumber,totalCopy;
 
+    public:
+        Library(string ab,string ac,string ad,string ae,string af,string ai)
+        {
+            bookName = ab;
+            authorNAme = ac;
+            company = ad;
+            publication = ae;
+            isbnNumber = af;
+            totalCopy = ai;
+        }
+    
     public:
     void information()//information about the books
     {
@@ -25,35 +32,20 @@ class Library
 };
 int main()
 {
-    Library book1;
-    book1.bookName ="Six of crows";
-    book1.authorNAme ="Leigh bardvgo";
-    book1.company = "Something";
-    book1.publication = " September 29, 2015";
-    book1.totalCopy = " 3";
-    book1.isbnNumber = "1233341" ;
+    Library book1("Six of crows","Leigh bardvgo","something", "September 29, 2015"," 3","1233341");
+    
 
     cout << "  *******____BOOK 1 INFORMATION____*******"<< endl;
     book1.information();
 
-    Library book2;
-    book2.bookName ="The lost symbol";
-    book2.authorNAme ="DAn brown";
-    book2.company = "Something";
-    book2.publication = " September 30, 2015";
-    book2.totalCopy = " 5";
-    book2.isbnNumber = "34343341" ;
+    Library book2("The lost symbol","DAn brown","Something"," September 30, 2015"," 5","34343341");
+  
 
     cout << "  *******____BOOK 2 INFORMATION____*******"<< endl;
     book2.information();
 
-    Library book3;
-    book3.bookName ="Kafka on the shore";
-    book3.authorNAme ="Haruki murakami";
-    book3.company = "Something";
-    book3.publication = " november 1, 2015";
-    book3.totalCopy = " 3";
-    book3.isbnNumber = "1343141234" ;
+    Library book3("Kafka on the shore","Haruki murakami","Something"," november 1, 2015"," 3","1343141234");
+   
 
     cout << " *******____BOOK 3 INFORMATION____*******"<< endl;
     book3.information();
